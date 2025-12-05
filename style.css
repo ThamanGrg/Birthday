@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    background: #f4d2c6;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 10rem;
+    color: #835ae4;
+    font-family: "Lucida Handwriting", cursive;
+    font-style: italic;
+    margin: 0rem;
+}
+
+h2 {
+    font-size: 6rem;
+    font-style: italic;
+    color: #835ae4;
+    font-family: "Lucida Handwriting", cursive;
+    margin: 0;
+}
+
+p {
+    font-style: italic;
+    color: #835ae4;
+    font-family: "Lucida Handwriting", cursive;
+    margin: 0;
+}
+
+.main {
+    height: 110vh;
+    background-image: url('assets/celebration-glitter.png');
+    background-size: cover;
+}
+
+.decorations {
+    z-index: -9999;
+}
+
+.banner-image {
+    width: 50%;
+}
+
+.top-banner {
+    display: flex;
+}
+
+.balloons-left,
+.balloons-right {
+    position: absolute;
+    top: 20%;
+    scale: 1.2;
+    z-index: -999;
+}
+
+.balloons-left {
+    left: 10%;
+}
+
+.balloons-right {
+    right: 10%;
+    transform: scaleX(-1);
+}
+
+.balloon {
+    position: relative;
+    width: 200px;
+    aspect-ratio: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+
+.balloon-blue {
+    scale: 0.9;
+}
+
+.balloon-purple {
+    position: absolute;
+    left: 42%;
+    top: 59%;
+    transform: rotateZ(40deg);
+    scale: 0.7;
+}
+
+.balloon-yellow {
+    position: absolute;
+    left: -30%;
+    top: 89%;
+    transform: rotateZ(330deg);
+    scale: 0.7;
+}
+
+.star-red {
+    position: absolute;
+    top: 56%;
+    left: 33%;
+    transform: rotateZ(29deg);
+
+}
+
+.star-blue {
+    position: absolute;
+    top: 134%;
+    left: 56%;
+}
+
+.balloon-cluster {
+    position: absolute;
+    top: -21%;
+    left: -7%;
+    width: 18%;
+    transform: rotateZ(150deg);
+}
+
+.main-text-sec {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cake-section {
+    height: 140vh;
+    position: relative;
+    background: #F4D2C6;
+    background: linear-gradient(180deg, rgba(244, 210, 198, 1) 0%, rgba(0, 0, 0, 1)15%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 100%);
+}
+
+#cake {
+    scale: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    opacity: 0.1;
+}
+
+#flame {
+    scale: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+#flame {
+    transition: 0.5s ease-in opacity;
+    animation: flicker 0.4s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        transform: translate(-134%, -135%) rotate(0deg) scaleX(1);
+    }
+
+    25% {
+        transform: translate(-134%, -135%) rotate(-5deg) scaleX(1.1);
+    }
+
+    50% {
+        transform: translate(-134%, -135%) rotate(5deg) scaleX(0.9);
+    }
+
+    75% {
+        transform: translate(-134%, -135%) rotate(-5deg) scaleX(1.05);
+    }
+
+    100% {
+        transform: translate(-134%, -135%) rotate(5deg) scaleX(0.95);
+    }
+}
+
+#cake {
+    transition: 1s ease-in opacity;
+}
+
+.light-candle {
+    width: 10rem;
+    height: 3rem;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #F4D2C6;
+}
+
+.bd-banner {
+    width: 100%;
+    scale: 0.6;
+    opacity: 0.01;
+    transition: 1s ease-in opacity;
+    position: absolute;
+    top: 20%;
+}
+
+.balloon-blue-cluster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    scale: 0.1;
+}
+
+.light-gradient {
+    box-shadow: 0 0 1000px 60px rgb(255, 207, 145);
+    width: 656px;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in opacity;
+}
+
+.c-balloon {
+    width: 10rem;
+    position: absolute;
+    top: 26%;
+    opacity: 0;
+}
+
+.balloon-left {
+    left: 3rem;
+    transition: 1s ease-in opacity;
+}
+
+.balloon-right {
+    right: 3rem;
+    transform: scaleX(-1);
+    transition: 1s ease-in opacity;
+}
+
+.lighter {
+    width: 1.6rem;
+    text-align: center;
+}
+
+.gift-section {
+    height: 100vh;
+    background-color: rebeccapurple;
+    position: relative;
+}
+
+.gift-txt {
+    color: #F4D2C6;
+    text-align: center;
+}
+
+.gift-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+}
+
+.gift-box p{
+    color: #F4D2C6;
+    text-align: center;
+}
+
+.gift-img {
+    width: 200px;
+    border-radius: 20px;
+
+}
+
+.unlock-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 2rem;
+    color: #835ae4;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
